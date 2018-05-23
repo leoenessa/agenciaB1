@@ -19,6 +19,14 @@ html{
     height: 100%;
 }
 
+.secao-1 .container{
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .top-navigation{
     display: flex;
     justify-content: space-around;
