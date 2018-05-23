@@ -367,13 +367,14 @@ html, body{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes{
     width: 100%;
     height: auto;
-    margin-top: 40px;
+    min-height: 300px;
+    margin-top: 15%;
     /*margin-left: 22px;*/
     display: flex;
     flex-direction: column;
@@ -438,6 +439,12 @@ html, body{
     color: #909090;
 }
 
+@media (min-width: 540px){
+    .secao-4 .container-opinioes .conteudo-opinioes{
+        width: 48%;
+    }
+}
+
 
 /*================SECAO-5================*/
 
@@ -465,14 +472,15 @@ html, body{
 .secao-5 .container-equipe{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 71px;
 }
 
 .secao-5 .container-equipe .conteudo-equipe{
-    width: 23%;
-    height: 50vh;
-    margin-top: 83px;
+    width: 100%;
+    height: auto;
+    margin-top: 30%;
     margin-left: 22px;
     display: flex;
     flex-direction: column;
@@ -489,7 +497,7 @@ html, body{
 }
 
 .secao-5 .container-equipe .conteudo-equipe img{
-    width: 75%;
+    width: 50%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -699,6 +707,19 @@ TABLET
     margin-left: 0;
 }
 
+.secao-4 .container-opinioes{
+    margin-top: 5%;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes{
+    margin-top: 10%;
+}
+
+.secao-5 .container-equipe .conteudo-equipe{
+    width: 45%;
+}
+
+}
 /*
 ==============
 DESKTOP
