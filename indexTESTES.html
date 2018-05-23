@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AgenciaB1</title>
-    
+      
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
@@ -12,7 +12,9 @@
       <link rel="stylesheet" href="css/bootstrap.css">
       <link rel="stylesheet"
   href="css/animate.min.css">
+
       <script src="js/jquery.min.js"></script>
+      <script src="js/funcionalidades.js"></script>
     <script type="text/javascript" src="js/jquery.fullpage.js"></script>
     
       
@@ -25,6 +27,8 @@
                 
                 <div class="top-navigation">
                     <div class="logotipo">
+                      <img src="img/logo.svg"
+                            srset="" class="logo-topo"">
                     </div>
                     <ul class="menu-principal list-inline">
                         <li><a href="#">Quem somos</a></li>
@@ -33,11 +37,48 @@
                         <li><a href="#">Contato</a></li>
                         <li><a href="#">Fale com a gente</a></li>
                     </ul>
+                    <div class="container-menu-principal-mobile">
+                      <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
+                      <ul class="menu-principal-mobile menu-invisivel">
+                          <li><a href="#">Quem somos</a></li>
+                          <li><a href="#">O que fazemos</a></li>
+                          <li><a href="#">Cases</a></li>
+                          <li><a href="#">Contato</a></li>
+                          <li><a href="#">Fale com a gente</a></li>
+                      </ul>
+
+                    </div>
+
+                    <script>
+                      
+                      $(".top-navigation #menu-principal-mobile-btn").click(function(){
+                          var botao =  $(this);
+                          var menu = $(".menu-principal-mobile");
+                          
+                          if(botao.attr("data-aberto") == 0){
+                              botao.attr("data-aberto",'1');
+                              botao.removeClass('fa-bars');
+                              menu.removeClass('menu-invisivel');
+                              botao.addClass('fa-times');
+                              menu.addClass('menu-visivel');
+                          }
+                          else if(botao.attr('data-aberto') == 1){
+                              botao.attr("data-aberto",'0');
+                              botao.removeClass('fa-times');
+                              menu.removeClass('menu-visivel');
+                              botao.addClass('fa-bars');  
+                              menu.addClass('menu-invisivel');
+                          }
+                        
+                      });
+
+                    </script>
+
                 </div>             
                 <div class="jumbo">
                       <h2>Especialistas em implementação e performance para seu e-commerce</h2>
                       <p>Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.</p>
-                      <p><a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a></p>
+                      <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
                 </div>
                 <div class="menu-inferior">
                   <i class="fa fa-arrow-down btn-proximo"></i>
@@ -45,7 +86,7 @@
             </div>
         </div>
          
-          <div class="section secao-2">
+          <div class="section secao-2 fp-auto-height-responsive">
             <div class="container">
                 
                 <div class="oque-fazemos">
@@ -109,7 +150,7 @@
             </div>
         </div>
         
-          <div class="section secao-3">
+          <div class="section secao-3 fp-auto-height-responsive">
               <div class="container">
                   
                   <div class="cases">
@@ -147,7 +188,7 @@
           </div>
           
           
-          <div class="section secao-4">
+          <div class="section secao-4 fp-auto-height-responsive">
               <div class="container">
                   
                   <div class="oque-dizem">
@@ -310,8 +351,8 @@
                
                 $(document).ready(function() {
                     $('#fullpage').fullpage({
-                        // responsiveHeight: 768,
-                        responsiveHeight: 2000,
+                        responsiveHeight: 768,
+                        // responsiveHeight: 2000,
                         navigation:true,  
                         //=========================
                         
