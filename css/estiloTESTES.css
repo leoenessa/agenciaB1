@@ -789,8 +789,12 @@ TABLET
 
 .secao-6 form#formulario-contato input,select{
     width: 48%;
-    height: 3em;
+    height: 2em;
     font-size: 2em;
+}
+
+.secao-6 form#formulario-contato textarea{
+    margin-top: 0;
 }
 
 footer address{
