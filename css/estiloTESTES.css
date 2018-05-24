@@ -10,6 +10,11 @@ html, body{
     overflow-x: hidden !important;
 }
 
+p::selection{
+    color: #484848;
+    background-color: #bed630;
+}
+
 .container{
     width: 100%;
     margin: 0;
@@ -148,18 +153,6 @@ html, body{
     border: 0;
     margin: 0;
     margin-top: 5%;
-}
-
-@media (min-width: 540px){ 
-
-.jumbo{ margin-top: 20%; }
-
-.jumbo h2{font-size: 40px;}
-
-.jumbo p{ font-size: 18px;}
-
-.jumbo a{ width: 40%; }
-
 }
 
 .menu-inferior{
@@ -375,7 +368,6 @@ html, body{
     height: auto;
     min-height: 300px;
     margin-top: 15%;
-    /*margin-left: 22px;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -383,7 +375,8 @@ html, body{
     background-color: #fff;
     box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
     position: relative;
-    padding: 80px 40px;
+    padding: 2em;
+    padding-top: 4em;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes:first-child{
@@ -448,6 +441,10 @@ html, body{
 
 /*================SECAO-5================*/
 
+.secao-5{
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
 
 .secao-5 .quem-faz{
     width: 100%;
@@ -474,14 +471,15 @@ html, body{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    margin-top: 71px;
+    margin-top: 10%;
 }
 
 .secao-5 .container-equipe .conteudo-equipe{
     width: 100%;
+    min-height: 300px;
     height: auto;
     margin-top: 30%;
-    margin-left: 22px;
+/*    margin-left: 22px;*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -522,7 +520,7 @@ html, body{
     font-weight: bold;
     line-height: 1.47;
     margin: 0;
-    margin-top: 60px;
+    margin-top: 10%;
     color: #333539;
 }
 
@@ -548,6 +546,9 @@ html, body{
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .secao-6 .contatos h2{
@@ -565,13 +566,20 @@ html, body{
     color: #fff;
 }
 
+.secao-6 .contatos .contatos-telefones{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .secao-6 .contatos h6{
+    width: 100%;
     font-size: 15px;
     color: #fff;
     line-height: 1.53;
     display: inline-block;
-    margin-left: 55px;
-    margin-top: 21px;
+/*    margin-left: 55px;*/
+    margin-top: 1%;
 }
 
 .secao-6 .contatos h6.whatsapp{
@@ -605,30 +613,35 @@ html, body{
 .secao-6 form#formulario-contato{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 10%;
     flex-wrap: wrap;
 }
 
 .secao-6 form#formulario-contato input,select{
-    width: 48%;
+    width: 100%;
     color: #000;
     border: solid 1px #dfdfdf;
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
-    margin-bottom: 20px;
-    height: 60px;
-    font-size: 1.5em;
-    padding: 5px;
+    margin-bottom: 5%;
+    height: 2em;
+    font-size: 1em;
+    padding: 5%;
+}
+
+.secao-6 form#formulario-contato input,select:focus{
+    outline: none;
+    border-color: 1px solid #ff0606;
 }
 
 .secao-6 form#formulario-contato textarea{
     width: 100%;
-    height: 200px;
+    height: 10em;
+    margin-top: 5%;
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
     border: solid 1px #dfdfdf;
-    margin-bottom: 25px;
-    padding: 5px;
-    font-size: 1.5em;
+    margin-bottom: 10%;
+    font-size: 1em;
 }
 
 .secao-6 form#formulario-contato #contato-form-btn{
@@ -654,8 +667,20 @@ html, body{
     align-items: center;
 }
 
+footer img{
+    width: 33%;
+    padding-left: 5px;
+}
+
 footer address{
     margin: 0;
+    width: 33%;
+}
+
+footer address p{
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
 }
 
 footer .redes-sociais-footer a{
@@ -671,6 +696,38 @@ footer .redes-sociais-footer a:hover{
     color: #bed630;
 }
 
+
+@media (min-width: 540px){ 
+
+.jumbo{ margin-top: 20%; }
+
+.jumbo h2{font-size: 40px;}
+
+.jumbo p{ font-size: 18px;}
+
+.jumbo a{ width: 40%;}
+
+.secao-5 .container-equipe{
+    margin-top: 0;
+}
+    
+.secao-5 .container-equipe .conteudo-equipe img{
+    width: 40%;
+}
+    
+.secao-6 form#formulario-contato input,select{
+    font-size: 1.5em;
+}
+
+footer img{
+    width: auto;
+}
+    
+footer address p{
+    font-size: 15px;
+}
+
+}
 
 @media(min-resolution: 2dppx),(-webkit-min-device-pixel-ratio:1.5){
     nav .logotipo{
@@ -717,6 +774,32 @@ TABLET
 
 .secao-5 .container-equipe .conteudo-equipe{
     width: 45%;
+    margin-top: 15%;
+}
+    
+.secao-6 .contatos .contatos-telefones{
+    flex-direction: row;
+    justify-content: center;
+}
+    
+.secao-6 .contatos h6{
+    width: 33%;
+    font-size: 14px;
+}    
+
+.secao-6 form#formulario-contato input,select{
+    width: 48%;
+    height: 3em;
+    font-size: 2em;
+}
+
+footer address{
+    width: 50%;
+}
+    
+footer address p{
+    margin: 0;
+    font-size: 18px;
 }
 
 }
@@ -784,6 +867,10 @@ DESKTOP
     text-transform: uppercase;
 }
 
+.menu-principal li a:hover{
+    color: #c7d300;
+}
+
 .menu-principal li:first-child{
     margin-left: 0;
     color: green;
@@ -791,14 +878,26 @@ DESKTOP
 
 .menu-principal li:last-child{
     border: 1px solid #fff;
+    background-color: #32ba46;
     border-radius: 30px;
-    padding: 7px 15px;    
+    padding: 5px 15px;    
+    cursor: pointer;
+}
+    
+.menu-principal li:last-child:hover{
+    background-color: #3edb55;
 }
 
-.menu-principal a :last-child::before{
-/*    content: '';*/
+.menu-principal a.menu-whatsapp:hover{
+    color: #fff;
+}
+    
+.menu-principal a.menu-whatsapp::before{
+    content: url(../img/whatsapp-logo.svg);
     width: 1em;
-    height: 1em;    
+    height: 1em; 
+    padding-right: 10px;
+    vertical-align: sub;
 }
 
 .jumbo{
@@ -1030,13 +1129,13 @@ DESKTOP
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 71px;
+    margin-top: 0;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes{
     width: 30%;
-    height: 45vh;
-    margin-top: 83px;
+    height: auto;
+    margin-top: 10%;
     margin-left: 22px;
     display: flex;
     flex-direction: column;
@@ -1045,7 +1144,8 @@ DESKTOP
     background-color: #fff;
     box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
     position: relative;
-    padding: 80px 40px;
+    padding: 2em;
+    padding-top: 5em;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes:first-child{
@@ -1134,8 +1234,9 @@ DESKTOP
 
 .secao-5 .container-equipe .conteudo-equipe{
     width: 23%;
-    height: 50vh;
-    margin-top: 83px;
+    height: auto;
+    min-height: 450px;
+    margin-top: 5%;
     margin-left: 22px;
     display: flex;
     flex-direction: column;
@@ -1144,7 +1245,8 @@ DESKTOP
     background-color: #fff;
     box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
     position: relative;
-    padding: 80px 30px;
+    padding: 2em;
+    padding-top: 5em;
 }
 
 .secao-5 .container-equipe .conteudo-equipe:first-child{
@@ -1222,10 +1324,6 @@ DESKTOP
 
 .secao-6 .contatos h6{
     font-size: 15px;
-    color: #fff;
-    line-height: 1.53;
-    display: inline-block;
-    margin-left: 55px;
     margin-top: 21px;
 }
 
