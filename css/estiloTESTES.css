@@ -1,0 +1,1429 @@
+/*
+==============
+DEFAULT MOBILE
+==============
+*/
+
+
+html, body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden !important;
+}
+
+p::selection{
+    color: #484848;
+    background-color: #bed630;
+}
+
+.container{
+    width: 100%;
+    margin: 0;
+}
+
+.secao-1{
+    background-image: url(../img/img-2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.secao-1 .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.top-navigation{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.logotipo{
+    width: 80%;
+    text-align: left;
+    object-fit: contain;
+}
+.top-navigation .container-menu-principal-mobile{
+   
+}
+
+.top-navigation #menu-principal-mobile-btn{
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-principal-mobile{
+    position: absolute;
+    border: 2px solid #000;
+    background-color: rgba(255,255,255,0.8);
+    list-style: none;
+    width: 40%;
+    transition: all .3s ease;
+}
+
+.menu-principal-mobile ul li{
+
+}
+
+.menu-visivel{
+    opacity: 1;
+    z-index: 2;
+    top: 60px;
+    right: 2px;
+}
+
+.menu-invisivel{
+    top: 60px;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.menu-principal{
+    display: none;
+}
+.menu-principal li{
+    text-align: center;
+    margin-left: 27px;
+}
+
+.menu-principal li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-principal li:first-child{
+    margin-left: 0;
+    color: green;
+}
+
+.menu-principal li:last-child{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 7px 15px;    
+}
+
+.menu-principal a :last-child::before{
+/*    content: '';*/
+    width: 1em;
+    height: 1em;    
+}
+
+.jumbo{
+    text-transform: uppercase;
+    margin-top: 30%;
+}
+
+.jumbo h2{
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    text-align: inherit;
+    font-weight: 800;
+    color: #fff;
+}
+
+.jumbo p{
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-top: 5%;
+}
+
+.jumbo a{
+    width: 50%;
+    height: 3.5em;
+    border-radius: 50px;
+    background-color: #bed630;
+    font-size: 12px;
+    font-weight: bold;
+    color: #474747;
+    border: 0;
+    margin: 0;
+    margin-top: 5%;
+}
+
+.menu-inferior{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+
+@keyframes btn-proximo-anim{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.menu-inferior, .menu-inferior .btn-proximo{
+    cursor: pointer;
+}
+
+.menu-inferior:hover .btn-proximo{
+    animation: 1s infinite ease-out btn-proximo-anim;
+}
+
+/*================SECAO-2================*/
+.secao-2{
+    background-color: #fff;
+    height: 100%;
+    /*padding-top: 48px;*/
+}
+
+.secao-2 .container, .secao-3 .container, .secao-4 .container, .secao-5 .container, .secao-6 .container{
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.secao-2 .oque-fazemos{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-2 .oque-fazemos h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+}
+
+.secao-2 .oque-fazemos p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-2 .container-servicos{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.secao-2 .container-servicos .conteudo-servicos{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin-top: 40px;
+    /*margin-left: 17px;*/
+}
+
+
+.secao-2 .container-servicos .conteudo-servicos:nth-child(4n+1){
+    margin-left: 0;
+}
+
+.secao-2 .container-servicos .conteudo-servicos:last-child{
+    /*margin-top: 108px;*/
+    margin-bottom: 40px;
+}
+
+.secao-2 .container-servicos .conteudo-servicos h3{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    color: #333539;
+}
+
+.secao-2 .container-servicos .conteudo-servicos p{
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #909090;
+}
+
+/*================SECAO-3================*/
+
+.secao-3{
+    background-color: #333539;   
+}
+
+.secao-3 .cases{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-3 .cases h2{
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-3 .cases p{
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+.secao-3 .container-cases{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.secao-3 .container-cases .conteudo-cases{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.secao-3 .container-cases .conteudo-cases:first-child{
+    margin-left: 0;
+}
+
+.secao-3 .container-cases .conteudo-cases:last-child{
+    margin-bottom: 40px;
+}
+
+.secao-3 .container-cases .conteudo-cases:hover{
+    transform: scale(1.3);    
+    
+}
+.secao-3 .container-cases .conteudo-cases img{
+    width: 100%;
+}
+
+.secao-3 .container-cases .conteudo-cases p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 19px;
+}
+
+/*================SECAO-4================*/
+
+.secao-4 .oque-dizem{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-4 .oque-dizem h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-4 .oque-dizem p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-4 .container-opinioes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 15%;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes{
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    background-color: #fff;
+    box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding: 2em;
+    padding-top: 4em;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes:first-child{
+    margin-left: 0;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes img{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.depoimento{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #909090;
+    line-height: 1.47;
+    text-align: center;
+    width: 100%;
+    margin-top: 19px;
+    font-style: italic;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.depoimento::before{
+    font-family: sans-serif;
+    content: open-quote;
+    font-size: 115px;
+    font-weight: bold;
+    color: #c8d400;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes h3.nome-opinioes{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    margin: 0;
+    margin-top: 28px;
+    color: #333539;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.profissao-opinioes{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.67;
+    color: #909090;
+}
+
+@media (min-width: 540px){
+    .secao-4 .container-opinioes .conteudo-opinioes{
+        width: 48%;
+    }
+}
+
+
+/*================SECAO-5================*/
+
+.secao-5{
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+
+.secao-5 .quem-faz{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-5 .quem-faz h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-5 .quem-faz p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-5 .container-equipe{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.secao-5 .container-equipe .conteudo-equipe{
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    margin-top: 30%;
+/*    margin-left: 22px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    background-color: #fff;
+    box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding: 80px 30px;
+}
+
+.secao-5 .container-equipe .conteudo-equipe:first-child{
+    margin-left: 0;
+}
+
+.secao-5 .container-equipe .conteudo-equipe img{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.secao-5 .container-equipe .conteudo-equipe p.depoimento-equipe{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #909090;
+    line-height: 1.47;
+    text-align: center;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.secao-5 .container-equipe .conteudo-equipe h3.nome-equipe{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    margin: 0;
+    margin-top: 10%;
+    color: #333539;
+}
+
+.secao-5 .container-equipe .conteudo-equipe p.cargo-equipe{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.67;
+    color: #909090;
+    font-style: italic;
+}
+
+/*================SECAO-6================*/
+
+.secao-6{
+    background-color: #333539;
+}
+
+.secao-6 .container{
+/*    width: 900px;*/
+}
+
+.secao-6 .contatos{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.secao-6 .contatos h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-6 .contatos p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+.secao-6 .contatos .contatos-telefones{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.secao-6 .contatos h6{
+    width: 100%;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.53;
+    display: inline-block;
+/*    margin-left: 55px;*/
+    margin-top: 1%;
+}
+
+.secao-6 .contatos h6.whatsapp{
+    margin-left: 0;
+}
+
+.secao-6 .contatos h6.whatsapp:before{
+    content: url('../img/whatsapp-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 .contatos h6.email-contato:before{
+    content: url('../img/mail-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 .contatos h6.telefones:before{
+    content: url('../img/telefone-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 form#formulario-contato{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    flex-wrap: wrap;
+}
+
+.secao-6 form#formulario-contato input,select{
+    width: 100%;
+    color: #000;
+    border: solid 1px #dfdfdf;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    margin-bottom: 5%;
+    height: 2em;
+    font-size: 1em;
+    padding: 5%;
+}
+
+.secao-6 form#formulario-contato input,select:focus{
+    outline: none;
+    border-color: 1px solid #ff0606;
+}
+
+.secao-6 form#formulario-contato textarea{
+    width: 100%;
+    height: 10em;
+    margin-top: 5%;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    border: solid 1px #dfdfdf;
+    margin-bottom: 10%;
+    font-size: 1em;
+}
+
+.secao-6 form#formulario-contato #contato-form-btn{
+    background-color: #bed630;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    font-size: 15px;
+    color: #340c46;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.secao-6 footer{
+    background-color: #26282b;
+    height: 70px;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer img{
+    width: 33%;
+    padding-left: 5px;
+}
+
+footer address{
+    margin: 0;
+    width: 33%;
+}
+
+footer address p{
+    display: inline-block;
+    text-align: center;
+    font-size: 10px;
+}
+
+footer .redes-sociais-footer a{
+    color: #fff;
+    margin-left: 8px;
+}
+
+footer .redes-sociais-footer a:first-child{
+    margin-left: 0;
+}
+
+footer .redes-sociais-footer a:hover{
+    color: #bed630;
+}
+
+
+@media (min-width: 540px){ 
+
+.jumbo{ margin-top: 20%; }
+
+.jumbo h2{font-size: 40px;}
+
+.jumbo p{ font-size: 18px;}
+
+.jumbo a{ width: 40%;}
+
+.secao-5 .container-equipe{
+    margin-top: 0;
+}
+    
+.secao-5 .container-equipe .conteudo-equipe img{
+    width: 40%;
+}
+    
+.secao-6 form#formulario-contato input,select{
+    font-size: 1.5em;
+}
+
+footer img{
+    width: auto;
+}
+    
+footer address p{
+    font-size: 15px;
+}
+
+}
+
+@media(min-resolution: 2dppx),(-webkit-min-device-pixel-ratio:1.5){
+    nav .logotipo{
+        background-image: url("img/logo.svg");
+    }
+}
+
+
+/*
+==============
+TABLET
+==============
+*/
+
+@media (min-width: 768px){
+
+.secao-2 .container-servicos .conteudo-servicos{
+    width: 45%;
+    margin-top: 40px;
+    /*margin-left: 17px;*/
+}
+
+
+.secao-2 .container-servicos .conteudo-servicos:nth-child(2n+1){
+    margin-left: 0;
+}
+
+.secao-3 .container-cases .conteudo-cases{
+    width: 48%;
+    margin-left: 22px;
+}
+
+.secao-3 .container-cases .conteudo-cases:nth-child(2n+1){
+    margin-left: 0;
+}
+
+.secao-4 .container-opinioes{
+    margin-top: 5%;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes{
+    margin-top: 10%;
+}
+
+.secao-5 .container-equipe .conteudo-equipe{
+    width: 45%;
+    margin-top: 15%;
+}
+    
+.secao-6 .contatos .contatos-telefones{
+    flex-direction: row;
+    justify-content: center;
+}
+    
+.secao-6 .contatos h6{
+    width: 33%;
+    font-size: 14px;
+}    
+
+.secao-6 form#formulario-contato input,select{
+    width: 48%;
+    height: 3em;
+    font-size: 2em;
+}
+
+footer address{
+    width: 50%;
+}
+    
+footer address p{
+    margin: 0;
+    font-size: 18px;
+}
+
+}
+/*
+==============
+DESKTOP
+==============
+*/
+
+@media (min-width:1024px){
+ 
+.container{
+    width: 1440px;
+    margin: 0;
+}
+
+.secao-1{
+    background-image: url(../img/img-2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+
+.secao-1 .container{
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-navigation{
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    padding-top: 0;
+    background-color: transparent;
+}
+
+.logotipo{
+    width: 188px;
+    height: 39px;
+    text-align: left;
+}
+
+.top-navigation .container-menu-principal-mobile{
+    display: none;
+}
+
+.menu-principal{
+    display: block;
+}
+
+.menu-principal li{
+    text-align: center;
+    margin-left: 27px;
+}
+
+.menu-principal li a{
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-principal li a:hover{
+    color: #c7d300;
+}
+
+.menu-principal li:first-child{
+    margin-left: 0;
+    color: green;
+}
+
+.menu-principal li:last-child{
+    border: 1px solid #fff;
+    background-color: #32ba46;
+    border-radius: 30px;
+    padding: 5px 15px;    
+    cursor: pointer;
+}
+    
+.menu-principal li:last-child:hover{
+    background-color: #3edb55;
+}
+
+.menu-principal a.menu-whatsapp:hover{
+    color: #fff;
+}
+    
+.menu-principal a.menu-whatsapp::before{
+    content: url(../img/whatsapp-logo.svg);
+    width: 1em;
+    height: 1em; 
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.jumbo{
+    text-transform: uppercase;
+    margin-top: 5%;
+}
+
+.jumbo h2{
+    font-size: 55px;
+    width: 100%;
+    height: auto;
+    text-align: inherit;
+    font-weight: 800;
+    color: #fff;
+}
+
+.jumbo p{
+  width: 100%;
+  height: auto;
+  font-size: 24px;
+  text-align: left;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-top: 5%;
+}
+
+.jumbo a{
+    width: 240px;
+    font-size: 15px;
+    margin-top: 3%;
+}
+
+.menu-inferior{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+}
+
+
+@keyframes btn-proximo-anim{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.menu-inferior, .menu-inferior .btn-proximo{
+    cursor: pointer;
+}
+
+.menu-inferior:hover .btn-proximo{
+    animation: 1s infinite ease-out btn-proximo-anim;
+}
+
+/*================SECAO-2================*/
+.secao-2{
+    background-color: #fff;
+    height: 100%;
+    /*padding-top: 48px;*/
+}
+
+.secao-2 .container, .secao-3 .container, .secao-4 .container, .secao-5 .container, .secao-6 .container{
+    height: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.secao-2 .oque-fazemos{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-2 .oque-fazemos h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+}
+
+.secao-2 .oque-fazemos p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-2 .container-servicos{
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.secao-2 .container-servicos .conteudo-servicos{
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    max-width: 22%;
+    margin-left: 17px;
+    margin-top: 0;
+}
+
+
+.secao-2 .container-servicos .conteudo-servicos:nth-child(4n+1){
+    margin-left: 0;
+}
+
+.secao-2 .container-servicos .conteudo-servicos:nth-child(n+5){
+    margin-top: 108px;
+}
+
+.secao-2 .container-servicos .conteudo-servicos h3{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    color: #333539;
+}
+
+.secao-2 .container-servicos .conteudo-servicos p{
+    font-size: 14px;
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #909090;
+}
+
+/*================SECAO-3================*/
+
+.secao-3{
+    background-color: #333539;   
+}
+
+.secao-3 .cases{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-3 .cases h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-3 .cases p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+.secao-3 .container-cases{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 71px;
+}
+
+.secao-3 .container-cases .conteudo-cases{
+    width: 30%;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.secao-3 .container-cases .conteudo-cases:first-child{
+    margin-left: 0;
+}
+
+.secao-3 .container-cases .conteudo-cases:hover{
+    transform: scale(1.3);    
+    
+}
+.secao-3 .container-cases .conteudo-cases img{
+    width: 100%;
+}
+
+.secao-3 .container-cases .conteudo-cases p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 19px;
+}
+
+/*================SECAO-4================*/
+
+.secao-4 .oque-dizem{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-4 .oque-dizem h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-4 .oque-dizem p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-4 .container-opinioes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes{
+    width: 30%;
+    height: auto;
+    margin-top: 10%;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    background-color: #fff;
+    box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding: 2em;
+    padding-top: 5em;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes:first-child{
+    margin-left: 0;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes img{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.depoimento{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #909090;
+    line-height: 1.47;
+    text-align: center;
+    width: 100%;
+    margin-top: 19px;
+    font-style: italic;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.depoimento::before{
+    font-family: sans-serif;
+    content: open-quote;
+    font-size: 115px;
+    font-weight: bold;
+    color: #c8d400;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes h3.nome-opinioes{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    margin: 0;
+    margin-top: 28px;
+    color: #333539;
+}
+
+.secao-4 .container-opinioes .conteudo-opinioes p.profissao-opinioes{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.67;
+    color: #909090;
+}
+
+
+/*================SECAO-5================*/
+
+
+.secao-5 .quem-faz{
+    width: 100%;
+    text-align: center;
+}
+
+.secao-5 .quem-faz h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #333539;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-5 .quem-faz p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #333539;
+}
+
+.secao-5 .container-equipe{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 71px;
+}
+
+.secao-5 .container-equipe .conteudo-equipe{
+    width: 23%;
+    height: auto;
+    min-height: 450px;
+    margin-top: 5%;
+    margin-left: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all .5s ease;
+    background-color: #fff;
+    box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
+    position: relative;
+    padding: 2em;
+    padding-top: 5em;
+}
+
+.secao-5 .container-equipe .conteudo-equipe:first-child{
+    margin-left: 0;
+}
+
+.secao-5 .container-equipe .conteudo-equipe img{
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.secao-5 .container-equipe .conteudo-equipe p.depoimento-equipe{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    color: #909090;
+    line-height: 1.47;
+    text-align: center;
+    width: 100%;
+    margin-top: 19px;
+}
+
+.secao-5 .container-equipe .conteudo-equipe h3.nome-equipe{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.47;
+    margin: 0;
+    margin-top: 60px;
+    color: #333539;
+}
+
+.secao-5 .container-equipe .conteudo-equipe p.cargo-equipe{
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.67;
+    color: #909090;
+    font-style: italic;
+}
+
+/*================SECAO-6================*/
+
+.secao-6{
+    background-color: #333539;
+}
+
+.secao-6 .container{
+/*    width: 900px;*/
+}
+
+.secao-6 .contatos{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.secao-6 .contatos h2{
+    font-size: 25px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.secao-6 .contatos p{
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+.secao-6 .contatos h6{
+    font-size: 15px;
+    margin-top: 21px;
+}
+
+.secao-6 .contatos h6.whatsapp{
+    margin-left: 0;
+}
+
+.secao-6 .contatos h6.whatsapp:before{
+    content: url('../img/whatsapp-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 .contatos h6.email-contato:before{
+    content: url('../img/mail-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 .contatos h6.telefones:before{
+    content: url('../img/telefone-logo.svg');
+    width: 1em;
+    height: 1em;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+.secao-6 form#formulario-contato{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.secao-6 form#formulario-contato input,select{
+    width: 48%;
+    color: #000;
+    border: solid 1px #dfdfdf;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    height: 60px;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+.secao-6 form#formulario-contato textarea{
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    border: solid 1px #dfdfdf;
+    margin-bottom: 25px;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+.secao-6 form#formulario-contato #contato-form-btn{
+    background-color: #bed630;
+    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    font-size: 15px;
+    color: #340c46;
+    font-weight: bold;
+    padding: 1em;
+}
+
+.secao-6 footer{
+    background-color: #26282b;
+    height: 70px;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer address{
+    margin: 0;
+}
+
+footer .redes-sociais-footer a{
+    color: #fff;
+    margin-left: 8px;
+}
+
+footer .redes-sociais-footer a:first-child{
+    margin-left: 0;
+}
+
+footer .redes-sociais-footer a:hover{
+    color: #bed630;
+}
+    
+}
+
+

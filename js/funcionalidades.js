@@ -1,27 +1,24 @@
-$('.btn-busca-produto').on('click',function(){
-    $('.busca-produto').show(1000);
-});
-
-/* Botao retornar para o topo  */
-
-var voltaTopo = function(){
-    if($(window).scrollTop()>500){
-        $("#botao-topo").show(1000);
+$(".top-navigation #menu-principal-mobile-btn").click(function(){
+    console.log("APERTOU");
+    var botao =  $(this);
+    var menu = $(".menu-principal-mobile");
+    
+    if(botao.attr("data-aberto") == 0){
+        console.log('0');
+        botao.attr("data-aberto",'1');
+        botao.removeClass('fa-bars');
+        menu.removeClass('menu-invisivel');
+        botao.addClass('fa-times');
+        menu.addClass('menu-visivel');
     }
-    else{
-        $("#botao-topo").hide(1000);
+    else if(botao.attr('data-aberto') == 1){
+        console.log('1');
+        botao.attr("data-aberto",'0');
+        botao.removeClass('fa-times');
+        menu.removeClass('menu-visivel');
+        botao.addClass('fa-bars');  
+        menu.addClass('menu-invisivel');
     }
-};
-
-$(window).on('scroll',function(){
-    voltaTopo();
-    console.log("Chamou voltatopo");
-})
-
-/* Retorna bara o topo apos clicar no botao-topo */
-$('#botao-topo').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
+  
 });
+                    
