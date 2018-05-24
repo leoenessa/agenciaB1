@@ -442,7 +442,7 @@ p::selection{
 /*================SECAO-5================*/
 
 .secao-5{
-    padding-top: 5%;
+    /*padding-top: 5%;*/
     margin-bottom: 5%;
 }
 
@@ -1245,7 +1245,7 @@ DESKTOP
     background-color: #fff;
     box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
     position: relative;
-    padding: 2em;
+    padding: 1em;
     padding-top: 5em;
 }
 
