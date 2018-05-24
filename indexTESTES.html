@@ -28,14 +28,14 @@
                 <div class="top-navigation">
                     <div class="logotipo">
                       <img src="img/logo.svg"
-                            srset="" class="logo-topo"">
+                            srset="" class="logo-topo">
                     </div>
                     <ul class="menu-principal list-inline">
                         <li><a href="#">Quem somos</a></li>
                         <li><a href="#">O que fazemos</a></li>
                         <li><a href="#">Cases</a></li>
                         <li><a href="#">Contato</a></li>
-                        <li><a href="#">Fale com a gente</a></li>
+                        <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
                     </ul>
                     <div class="container-menu-principal-mobile">
                       <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
@@ -230,7 +230,7 @@
               </div>
           </div>
           
-          <div class="section secao-5">
+          <div class="section secao-5 fp-auto-height-responsive">
                 <div class="container">
                     
                     <div class="quem-faz">
@@ -298,9 +298,11 @@
                 <div class="contatos">
                     <h2>Contato</h2>
                     <p>Não importa o tamanho do desafio</p>
-                    <h6 class="whatsapp">21 96576-8885</h6>
-                    <h6 class="email-contato">contato@agenciab1.com.br</h6>
-                    <h6 class="telefones">21 96576-8885 | 21 97979-6508 | 21 967451591</h6>
+                    <div class="contatos-telefones">
+                        <h6 class="whatsapp">21 96576-8885</h6>
+                        <h6 class="email-contato">contato@agenciab1.com.br</h6>
+                        <h6 class="telefones">21 96576-8885 | 21 97979-6508 | 21 967451591</h6>
+                    </div>21
                 </div>
                 
                 <form action="#" method="post" id="formulario-contato">
@@ -359,17 +361,16 @@
                         onLeave: function(index, nextIndex, direction) {
                             
                             if( index == 1 && nextIndex == 2 ) {
-                                console.log("DENTRO DO 2");
                                 $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
                                 $isAnimatedSecond.addClass('animated zoomIn'); 
-                                $isAnimatedSecond.eq(0).css('animation-delay', '0.2s');
-                                $isAnimatedSecond.eq(1).css('animation-delay', '0.4s');
-                                $isAnimatedSecond.eq(2).css('animation-delay', '0.6s');
-                                $isAnimatedSecond.eq(3).css('animation-delay', '0.8s');
-                                $isAnimatedSecond.eq(4).css('animation-delay', '0.8s');
-                                $isAnimatedSecond.eq(5).css('animation-delay', '0.6s');
-                                $isAnimatedSecond.eq(6).css('animation-delay', '0.4s');
-                                $isAnimatedSecond.eq(7).css('animation-delay', '0.2s');
+                                $isAnimatedSecond.eq(0).css('animation-delay', '0.1s');
+                                $isAnimatedSecond.eq(1).css('animation-delay', '0.2s');
+                                $isAnimatedSecond.eq(2).css('animation-delay', '0.3s');
+                                $isAnimatedSecond.eq(3).css('animation-delay', '0.4s');
+                                $isAnimatedSecond.eq(4).css('animation-delay', '0.1s');
+                                $isAnimatedSecond.eq(5).css('animation-delay', '0.2s');
+                                $isAnimatedSecond.eq(6).css('animation-delay', '0.3s');
+                                $isAnimatedSecond.eq(7).css('animation-delay', '0.4s');
                                 
                             }
                             else if(( index == 1 || index == 2 ) && nextIndex == 3 ){
