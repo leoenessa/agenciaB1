@@ -6,7 +6,7 @@ DEFAULT MOBILE
 
 
 html, body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
     overflow-x: hidden !important;
 }
 
@@ -31,6 +31,7 @@ p::selection{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 5%;
 }
 
 .top-navigation{
@@ -107,9 +108,7 @@ p::selection{
 }
 
 .menu-principal li:last-child{
-    border: 1px solid #fff;
-    border-radius: 30px;
-    padding: 7px 15px;    
+    
 }
 
 .menu-principal a :last-child::before{
@@ -140,11 +139,11 @@ p::selection{
   line-height: 1.25;
   color: #ffffff;
   margin-top: 5%;
+  text-transform: none;
 }
 
 .jumbo a{
     width: 50%;
-    height: 3.5em;
     border-radius: 50px;
     background-color: #bed630;
     font-size: 12px;
@@ -155,6 +154,10 @@ p::selection{
     margin-top: 5%;
 }
 
+.jumbo a:hover{
+    background-color: #d7ec5c;
+    color: #340c46;
+}
 .menu-inferior{
     width: 100%;
     text-align: center;
@@ -227,6 +230,7 @@ p::selection{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .secao-2 .container-servicos .conteudo-servicos{
@@ -807,16 +811,23 @@ footer address p{
 }
 
 }
+
+@media (min-height:768px){
+.secao-2 .container-servicos{
+    margin-bottom: 4%;    
+}
+
+}
 /*
 ==============
 DESKTOP
 ==============
 */
 
-@media (min-width:1024px){
+@media (min-width:1025px){
  
 .container{
-    width: 1440px;
+/*    width: 1440px;*/
     margin: 0;
 }
 
@@ -881,20 +892,30 @@ DESKTOP
 }
 
 .menu-principal li:last-child{
-    border: 1px solid #fff;
-    background-color: #32ba46;
-    border-radius: 30px;
-    padding: 5px 15px;    
+    background-color: transparent;
     cursor: pointer;
 }
     
 .menu-principal li:last-child:hover{
+}
+    
+
+.menu-principal a.menu-whatsapp{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 8px 15px;    
+    cursor: pointer;
+}
+    
+.menu-principal a.menu-whatsapp:hover{
+    color: #fff;
+    background-color: #32ba46;
+}
+    
+.menu-principal a.menu-whatsapp:active{
     background-color: #3edb55;
 }
 
-.menu-principal a.menu-whatsapp:hover{
-    color: #fff;
-}
     
 .menu-principal a.menu-whatsapp::before{
     content: url(../img/whatsapp-logo.svg);
@@ -929,9 +950,10 @@ DESKTOP
 }
 
 .jumbo a{
-    width: 240px;
+    width: auto;
     font-size: 15px;
     margin-top: 3%;
+    padding: 21px 45px;
 }
 
 .menu-inferior{
