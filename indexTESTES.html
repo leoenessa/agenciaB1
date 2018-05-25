@@ -23,96 +23,97 @@
   <body>
       <div id="fullpage">
           <div class="section secao-1">
-            <div class="container">
-                
-                <div class="top-navigation">
-                    <div class="logotipo">
-                      <img src="img/logo.svg"
-                            srset="" class="logo-topo">
-                    </div>
-                    <ul class="menu-principal list-inline">
-                        <li><a href="#">Quem somos</a></li>
-                        <li><a href="#">O que fazemos</a></li>
-                        <li><a href="#">Cases</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
-                    </ul>
-                    <div class="container-menu-principal-mobile">
-                      <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
-                      <ul class="menu-principal-mobile menu-invisivel">
+              <div class="container">
+                  
+                  <div class="top-navigation">
+                      <div class="logotipo">
+                        <img src="img/logo.svg"
+                              srset="" class="logo-topo">
+                      </div>
+                      <ul class="menu-principal list-inline">
                           <li><a href="#">Quem somos</a></li>
                           <li><a href="#">O que fazemos</a></li>
                           <li><a href="#">Cases</a></li>
                           <li><a href="#">Contato</a></li>
-                          <li><a href="#">Fale com a gente</a></li>
+                          <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
                       </ul>
+                      <div class="container-menu-principal-mobile">
+                        <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
+                        <ul class="menu-principal-mobile menu-invisivel">
+                            <li><a href="#">Quem somos</a></li>
+                            <li><a href="#">O que fazemos</a></li>
+                            <li><a href="#">Cases</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="#">Fale com a gente</a></li>
+                        </ul>
 
-                    </div>
+                      </div>
 
-                    <script>
-                      
-                      $(".top-navigation #menu-principal-mobile-btn").click(function(){
-                          var botao =  $(this);
-                          var menu = $(".menu-principal-mobile");
+                      <script>
+                        
+                        $(".top-navigation #menu-principal-mobile-btn").click(function(){
+                            var botao =  $(this);
+                            var menu = $(".menu-principal-mobile");
+                            
+                            if(botao.attr("data-aberto") == 0){
+                                botao.attr("data-aberto",'1');
+                                botao.removeClass('fa-bars');
+                                menu.removeClass('menu-invisivel');
+                                botao.addClass('fa-times');
+                                menu.addClass('menu-visivel');
+                            }
+                            else if(botao.attr('data-aberto') == 1){
+                                botao.attr("data-aberto",'0');
+                                botao.removeClass('fa-times');
+                                menu.removeClass('menu-visivel');
+                                botao.addClass('fa-bars');  
+                                menu.addClass('menu-invisivel');
+                            }
                           
-                          if(botao.attr("data-aberto") == 0){
-                              botao.attr("data-aberto",'1');
-                              botao.removeClass('fa-bars');
-                              menu.removeClass('menu-invisivel');
-                              botao.addClass('fa-times');
-                              menu.addClass('menu-visivel');
-                          }
-                          else if(botao.attr('data-aberto') == 1){
-                              botao.attr("data-aberto",'0');
-                              botao.removeClass('fa-times');
-                              menu.removeClass('menu-visivel');
-                              botao.addClass('fa-bars');  
-                              menu.addClass('menu-invisivel');
-                          }
-                        
-                      });
+                        });
 
-                    </script>
+                      </script>
 
-                </div>             
-                <div class="jumbo">
-                      <h2>Especialistas em implementação e performance para seu e-commerce</h2>
-                      <p>Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.</p>
-                      <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
-                </div>
-                
-                <script>
-                    'use strict'
-                    var $actualBanner = 0;
-                    var $titulo = $(".jumbo h2");
-                    var $subtitulo = $(".jumbo p");
-                    var $secao1bg = $(".secao-1");
-                    
-                    window.setInterval(function(){
-                        if($actualBanner==0){
-                            $actualBanner++;
-                            $titulo.text("Especialistas em implementação e performance para seu e-commerce");
-                            $subtitulo.text("Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.");
-                            $secao1bg.css('background-image', 'url("img/img-2.jpg")');
-                        }
-                        else{
-                            $actualBanner--;
-                            $titulo.text("Projetos feitos sob medida para o seu negócio");
-                            $subtitulo.text("Soluções pensadas no que você precisa. Agende uma conversa com a gente.");
-                            $secao1bg.css('background-image', 'url("img/img-2.jpg")');
-                        }
-                        
-                    }, 2000);
-                </script>
-                
-                
-                <div class="menu-inferior">
-                  <i class="fa fa-arrow-down btn-proximo"></i>
-                </div>
-            </div>
+                  </div>             
+                  <div class="jumbo">
+                        <h2>Especialistas em implementação e performance para seu e-commerce</h2>
+                        <p>Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.</p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
+                  </div>
+                  
+                  <script>
+                      'use strict'
+                      var $actualBanner = 0;
+                      var $titulo = $(".jumbo h2");
+                      var $subtitulo = $(".jumbo p");
+                      var $secao1 = $(".secao-1");
+                      
+                      window.setInterval(function(){
+                          if($actualBanner==0){
+                              $actualBanner++;
+                              $secao1.addClass("especial");
+                              $(".secao-1.especial").css("opacity","1");
+                              $titulo.text("Especialistas em implementação e performance para seu e-commerce");
+                              $subtitulo.text("Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.");
+                          }
+                          else{
+                              $actualBanner--;
+                              $secao1.removeClass("especial");
+                              $titulo.text("Projetos feitos sob medida para o seu negócio");
+                              $subtitulo.text("Soluções pensadas no que você precisa. Agende uma conversa com a gente.");
+                          }
+                          
+                      }, 2000);
+                  </script>
+                  
+                  
+                  <div class="menu-inferior">
+                    <i class="fa fa-arrow-down btn-proximo"></i>
+                  </div>
+              </div>
         </div>
          
-          <div class="section secao-2 porra fp-auto-height-responsive">
+          <div class="section secao-2 fp-auto-height-responsive">
             <div class="container">
                 
                 <div class="oque-fazemos">
