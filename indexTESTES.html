@@ -86,20 +86,20 @@
                     var $actualBanner = 0;
                     var $titulo = $(".jumbo h2");
                     var $subtitulo = $(".jumbo p");
-                    var $jumbobg = $(".jumbo");
+                    var $secao1bg = $(".secao-1");
                     
                     window.setInterval(function(){
                         if($actualBanner==0){
                             $actualBanner++;
                             $titulo.text("Especialistas em implementação e performance para seu e-commerce");
                             $subtitulo.text("Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.");
-                            $jumbobg.css('background-image', 'url("/img/img-2.jpg")');
+                            $secao1bg.css('background-image', 'url("img/img-2.jpg")');
                         }
                         else{
                             $actualBanner--;
                             $titulo.text("Projetos feitos sob medida para o seu negócio");
                             $subtitulo.text("Soluções pensadas no que você precisa. Agende uma conversa com a gente.");
-                            $jumbobg.css('background-image', 'url("img/img.jpg")');
+                            $secao1bg.css('background-image', 'url("img/img-2.jpg")');
                         }
                         
                     }, 2000);
