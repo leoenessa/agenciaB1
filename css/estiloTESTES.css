@@ -24,7 +24,34 @@ p::selection{
     background-image: url(../img/img-2.jpg);
     background-size: cover;
     height: 100%;
+    transition: opacity .5s ease;
 }
+
+.secao-1-bg1{
+    background-image: url(../img/img.jpg);
+    background-size: cover;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.secao-1-bg2{
+    background-image: url(../img/img.jpg) !important;
+    background-size: cover;
+    height: 100%;
+    display: none;
+}
+
+.secao-1-visivel{
+    opacity: 1;
+    z-index: 1;
+}
+
+.secao-1-invisivel{
+    opacity: 0;
+    z-index: -1;
+}
+
+
 
 .secao-1 .container{
     height: 100%;
@@ -832,9 +859,20 @@ DESKTOP
 }
 
 .secao-1{
-    background-image: url(../img/img-2.jpg);
+   background-image: url(../img/img-2.jpg);
     background-size: cover;
     height: 100%;
+}
+
+.secao-1.especial{
+    opacity: .5 !important; 
+}
+.secao-1.especial::before{
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right:0; bottom: 0;
+    background: url(../img/img.jpg);
+    background-size: cover;
 }
 
 .secao-1 .container{
