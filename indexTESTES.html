@@ -108,7 +108,7 @@
                   
                   
                   <div class="menu-inferior">
-                    <i class="fa fa-arrow-down btn-proximo"></i>
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
                   </div>
               </div>
         </div>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
                 <div class="menu-inferior">
-                  <i class="fa fa-arrow-down btn-proximo"></i>
+                  <img src="img/icon%20mouse.png" class="btn-proximo">
                 </div>
      
             </div>
@@ -208,7 +208,7 @@
                   </div>
                   
                   <div class="menu-inferior">
-                    <i class="fa fa-arrow-down btn-proximo"></i>
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
                   </div>
               </div>
             
@@ -251,7 +251,7 @@
                   </div>     
                   
                   <div class="menu-inferior">
-                    <i class="fa fa-arrow-down btn-proximo"></i>
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
                   </div>
                   
               </div>
@@ -309,7 +309,7 @@
                     </div>
                     
                     <div class="menu-inferior">
-                        <i class="fa fa-arrow-down btn-proximo"></i>
+                        <img src="img/icon%20mouse.png" class="btn-proximo">
                     </div>
                     
                 </div>
@@ -372,7 +372,7 @@
                 var $isAnimatedSecond = $('.secao-2 .is-animated');
                 var $isAnimatedThird = $('.secao-3 .is-animated');
                 var $isAnimatedFour = $('.secao-4 .is-animated');
-                var $menusInferiores = $('.menu-inferior');
+                var $menusInferiores = $('.menu-inferior img');
                
                 $(document).ready(function() {
                     $('#fullpage').fullpage({
@@ -385,7 +385,7 @@
                         onLeave: function(index, nextIndex, direction) {
                             
                             if( index == 1 && nextIndex == 2 ) {
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                                $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                                 $isAnimatedSecond.addClass('animated zoomIn'); 
                                 $isAnimatedSecond.eq(0).css('animation-delay', '0.1s');
                                 $isAnimatedSecond.eq(1).css('animation-delay', '0.2s');
@@ -398,7 +398,6 @@
                                 
                             }
                             else if(( index == 1 || index == 2 ) && nextIndex == 3 ){
-                                console.log("DENTRO DO 3");
                                 $isAnimatedThird.eq(0).addClass('animated fadeInRight');
                                 $isAnimatedThird.eq(0).css('animation-delay', '0.4s');
                                 $isAnimatedThird.eq(1).addClass('animated fadeInDown');
@@ -407,18 +406,15 @@
                                 $isAnimatedThird.eq(0).css('animation-delay', '0.4s');
                             }
                             else if(( index == 1 || index == 2 || index == 3 ) && nextIndex == 4){
-                                console.log("DENTRO DO 4");
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                                $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                                 $isAnimatedFour.addClass('animated slideInLeft'); 
                                 $isAnimatedFour.css('animation-delay', '0.2s');
                                 
                             }
                             else if(( index == 1 || index == 2 || index == 3 || index == 4 ) && nextIndex == 5){
-                                console.log("DENTRO DO 5");
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                               $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                             }
                             else if(( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 ) && nextIndex == 6){
-                                console.log("DENTRO DO 6");
                             }
                             
                         }
