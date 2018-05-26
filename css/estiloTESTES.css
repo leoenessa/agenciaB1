@@ -219,7 +219,7 @@ p::selection{
 
 /*================SECAO-2================*/
 .secao-2{
-    background-color: #fff;
+    background-color: #fbfbfb;
     height: 100%;
     /*padding-top: 48px;*/
 }
@@ -256,6 +256,7 @@ p::selection{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
     
 }
@@ -462,13 +463,6 @@ p::selection{
     line-height: 1.67;
     color: #909090;
 }
-
-@media (min-width: 540px){
-    .secao-4 .container-opinioes .conteudo-opinioes{
-        width: 48%;
-    }
-}
-
 
 /*================SECAO-5================*/
 
@@ -737,6 +731,10 @@ footer .redes-sociais-footer a:hover{
 .jumbo p{ font-size: 18px;}
 
 .jumbo a{ width: 40%;}
+    
+.secao-4 .container-opinioes .conteudo-opinioes{
+    width: 48%;
+}
 
 .secao-5 .container-equipe{
     margin-top: 0;
@@ -843,7 +841,6 @@ footer address p{
 .secao-2 .container-servicos{
     margin-bottom: 4%;    
 }
-
 }
 /*
 ==============
@@ -854,7 +851,6 @@ DESKTOP
 @media (min-width:1025px){
  
 .container{
-/*    width: 1440px;*/
     margin: 0;
 }
 
@@ -1028,8 +1024,6 @@ DESKTOP
 
 /*================SECAO-2================*/
 .secao-2{
-    background-color: #fff;
-    height: 100%;
     /*padding-top: 48px;*/
 }
 
@@ -1066,6 +1060,7 @@ DESKTOP
     margin-top: 72px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
@@ -1240,12 +1235,16 @@ DESKTOP
 .secao-4 .container-opinioes .conteudo-opinioes p.depoimento::before{
     font-family: sans-serif;
     content: open-quote;
+/*    content: '"';*/
     font-size: 115px;
     font-weight: bold;
     color: #c8d400;
     position: absolute;
     top: 0;
     left: 0;
+}
+p.depoimento::after{
+    content: no-close-quote;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes h3.nome-opinioes{
@@ -1486,6 +1485,13 @@ footer .redes-sociais-footer a:first-child{
 
 footer .redes-sociais-footer a:hover{
     color: #bed630;
+}
+    
+}
+
+@media (min-width:1500px){
+.container{
+    width: 1440px !important; 
 }
     
 }
