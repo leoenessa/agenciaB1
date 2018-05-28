@@ -6,7 +6,7 @@ DEFAULT MOBILE
 
 
 html, body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
     overflow-x: hidden !important;
 }
 
@@ -24,6 +24,32 @@ p::selection{
     background-image: url(../img/img-2.jpg);
     background-size: cover;
     height: 100%;
+    transition: opacity .5s ease;
+}
+
+
+.secao-1-bg1{
+    background-image: url(../img/img.jpg);
+    background-size: cover;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.secao-1-bg2{
+    background-image: url(../img/img.jpg) !important;
+    background-size: cover;
+    height: 100%;
+    display: none;
+}
+
+.elemento-visivel{
+    opacity: 1;
+    z-index: 1;
+}
+
+.elemento-invisivel{
+    opacity: 0;
+    z-index: -1;
 }
 
 .secao-1 .container{
@@ -31,6 +57,8 @@ p::selection{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 5%;
+    text-align: center;
 }
 
 .top-navigation{
@@ -58,17 +86,53 @@ p::selection{
     cursor: pointer;
 }
 
-.menu-principal-mobile{
-    position: absolute;
-    border: 2px solid #000;
-    background-color: rgba(255,255,255,0.8);
+.menu-principal-mobile320{
+    position: fixed;
+    top: 0 !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background-color: #bed630;
     list-style: none;
-    width: 40%;
+    width: 100vw;
+    height: 100vh;
     transition: all .3s ease;
+    text-align: center;
+    padding-top: 25%;
 }
 
-.menu-principal-mobile ul li{
+.menu-principal-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    background-color: #bed630;
+    list-style: none;
+    width: auto;
+    height: 50vh;
+    transition: all .3s ease;
+    text-align: center;
+    padding-top: 25%;
+}
 
+.menu-principal-mobile320 li{
+    margin-bottom: 2em;
+}
+
+.menu-principal-mobile320 li a,.menu-principal-mobile li a{
+    font-size: 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.fechar320-btn{
+    position: absolute;
+    font-size: 40px;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    color: #000;
 }
 
 .menu-visivel{
@@ -101,15 +165,26 @@ p::selection{
     text-transform: uppercase;
 }
 
+a.menu-whatsapp{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 8px 15px;    
+    cursor: pointer;
+}
+    
+a.menu-whatsapp:hover{
+    color: #fff;
+    background-color: #32ba46;
+}
+    
+
 .menu-principal li:first-child{
     margin-left: 0;
     color: green;
 }
 
 .menu-principal li:last-child{
-    border: 1px solid #fff;
-    border-radius: 30px;
-    padding: 7px 15px;    
+    
 }
 
 .menu-principal a :last-child::before{
@@ -124,30 +199,31 @@ p::selection{
 }
 
 .jumbo h2{
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 900;
     width: 100%;
     height: auto;
-    text-align: inherit;
-    font-weight: 800;
+    text-align: center;
     color: #fff;
 }
 
 .jumbo p{
   width: 100%;
   height: auto;
-  font-size: 12px;
-  text-align: left;
+  font-size: 22px;
+  text-align: center;
   line-height: 1.25;
   color: #ffffff;
   margin-top: 5%;
+  text-transform: none;
 }
 
 .jumbo a{
-    width: 50%;
-    height: 3.5em;
+    width: 90%;
+    padding: 5% 0;
+    font-size: 15px;
     border-radius: 50px;
     background-color: #bed630;
-    font-size: 12px;
     font-weight: bold;
     color: #474747;
     border: 0;
@@ -155,6 +231,10 @@ p::selection{
     margin-top: 5%;
 }
 
+.jumbo a:hover{
+    background-color: #d7ec5c;
+    color: #340c46;
+}
 .menu-inferior{
     width: 100%;
     text-align: center;
@@ -189,7 +269,7 @@ p::selection{
 
 /*================SECAO-2================*/
 .secao-2{
-    background-color: #fff;
+    background-color: #fbfbfb;
     height: 100%;
     /*padding-top: 48px;*/
 }
@@ -226,7 +306,9 @@ p::selection{
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
+    
 }
 
 .secao-2 .container-servicos .conteudo-servicos{
@@ -306,6 +388,7 @@ p::selection{
     justify-content: flex-start;
     transition: all .5s ease;
     cursor: pointer;
+    animation-fill-mode: backwards;
 }
 
 .secao-3 .container-cases .conteudo-cases:first-child{
@@ -332,6 +415,67 @@ p::selection{
     width: 100%;
     margin-top: 19px;
 }
+
+.cases-slide-show{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    transition: all .5s ease;
+}
+
+.cases-slide-show .container-slideshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cases-slide-show .slides{
+    width: 50vw;
+    height: 50vw;
+}
+
+.cases-slide-show .slides .slide-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cases-slide-show .fechar-btn{
+    font-size: 18px;
+    position: absolute;
+    top: 2em;
+    right: 5%;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cases-slide-show .fechar-btn::after{
+    content: "X";
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 1.5em;
+    padding-left: .5em;
+    vertical-align: middle;
+}
+
+.cases-slide-show .container-slideshow 
+.slide-posterior-btn,
+.slide-anterior-btn{
+    cursor: pointer;
+    color: #fff;
+    margin: 2em;
+}
+
 
 /*================SECAO-4================*/
 
@@ -432,17 +576,10 @@ p::selection{
     color: #909090;
 }
 
-@media (min-width: 540px){
-    .secao-4 .container-opinioes .conteudo-opinioes{
-        width: 48%;
-    }
-}
-
-
 /*================SECAO-5================*/
 
 .secao-5{
-    padding-top: 5%;
+    /*padding-top: 5%;*/
     margin-bottom: 5%;
 }
 
@@ -699,13 +836,22 @@ footer .redes-sociais-footer a:hover{
 
 @media (min-width: 540px){ 
 
+    
+.menu-principal-mobile320{
+    padding-top: 20%;
+}
+    
 .jumbo{ margin-top: 20%; }
 
 .jumbo h2{font-size: 40px;}
 
 .jumbo p{ font-size: 18px;}
 
-.jumbo a{ width: 40%;}
+.jumbo a{ padding: 4% 0;}
+    
+.secao-4 .container-opinioes .conteudo-opinioes{
+    width: 48%;
+}
 
 .secao-5 .container-equipe{
     margin-top: 0;
@@ -743,6 +889,22 @@ TABLET
 */
 
 @media (min-width: 768px){
+    
+.menu-principal-mobile{
+    position: absolute;
+    background-color: #bed630;
+    height: auto;
+    top: 59px;
+    right: 1px;
+    padding: 5% 4%;
+    list-style: none;
+    transition: all .3s ease;
+    text-align: center;
+}
+    
+.menu-principal-mobile li{
+    margin-bottom: 2em;
+}
 
 .secao-2 .container-servicos .conteudo-servicos{
     width: 45%;
@@ -789,8 +951,12 @@ TABLET
 
 .secao-6 form#formulario-contato input,select{
     width: 48%;
-    height: 3em;
+    height: 2em;
     font-size: 2em;
+}
+
+.secao-6 form#formulario-contato textarea{
+    margin-top: 0;
 }
 
 footer address{
@@ -803,23 +969,39 @@ footer address p{
 }
 
 }
+
+@media (min-height:768px){
+.secao-2 .container-servicos{
+    margin-bottom: 4%;    
+}
+}
 /*
 ==============
 DESKTOP
 ==============
 */
 
-@media (min-width:1024px){
+@media (min-width:1025px){
  
 .container{
-    width: 1440px;
     margin: 0;
 }
 
 .secao-1{
-    background-image: url(../img/img-2.jpg);
+   background-image: url(../img/img-2.jpg);
     background-size: cover;
     height: 100%;
+}
+
+.secao-1.especial{
+    opacity: .5 !important; 
+}
+.secao-1.especial::before{
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right:0; bottom: 0;
+    background: url(../img/img.jpg);
+    background-size: cover;
 }
 
 .secao-1 .container{
@@ -828,6 +1010,7 @@ DESKTOP
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: left;
 }
 
 .top-navigation{
@@ -877,20 +1060,30 @@ DESKTOP
 }
 
 .menu-principal li:last-child{
-    border: 1px solid #fff;
-    background-color: #32ba46;
-    border-radius: 30px;
-    padding: 5px 15px;    
+    background-color: transparent;
     cursor: pointer;
 }
     
 .menu-principal li:last-child:hover{
+}
+    
+
+a.menu-whatsapp{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 8px 15px;    
+    cursor: pointer;
+}
+    
+a.menu-whatsapp:hover{
+    color: #fff;
+    background-color: #32ba46;
+}
+    
+.menu-principal a.menu-whatsapp:active{
     background-color: #3edb55;
 }
 
-.menu-principal a.menu-whatsapp:hover{
-    color: #fff;
-}
     
 .menu-principal a.menu-whatsapp::before{
     content: url(../img/whatsapp-logo.svg);
@@ -909,7 +1102,7 @@ DESKTOP
     font-size: 55px;
     width: 100%;
     height: auto;
-    text-align: inherit;
+    text-align: left;
     font-weight: 800;
     color: #fff;
 }
@@ -925,9 +1118,10 @@ DESKTOP
 }
 
 .jumbo a{
-    width: 240px;
+    width: auto;
     font-size: 15px;
     margin-top: 3%;
+    padding: 21px 45px;
 }
 
 .menu-inferior{
@@ -964,8 +1158,6 @@ DESKTOP
 
 /*================SECAO-2================*/
 .secao-2{
-    background-color: #fff;
-    height: 100%;
     /*padding-top: 48px;*/
 }
 
@@ -1002,6 +1194,7 @@ DESKTOP
     margin-top: 72px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
@@ -1176,12 +1369,16 @@ DESKTOP
 .secao-4 .container-opinioes .conteudo-opinioes p.depoimento::before{
     font-family: sans-serif;
     content: open-quote;
+/*    content: '"';*/
     font-size: 115px;
     font-weight: bold;
     color: #c8d400;
     position: absolute;
     top: 0;
     left: 0;
+}
+p.depoimento::after{
+    content: no-close-quote;
 }
 
 .secao-4 .container-opinioes .conteudo-opinioes h3.nome-opinioes{
@@ -1245,7 +1442,7 @@ DESKTOP
     background-color: #fff;
     box-shadow: 0 0 21px 5px rgba(0, 0, 0, 0.08);
     position: relative;
-    padding: 2em;
+    padding: 1em;
     padding-top: 5em;
 }
 
@@ -1422,6 +1619,13 @@ footer .redes-sociais-footer a:first-child{
 
 footer .redes-sociais-footer a:hover{
     color: #bed630;
+}
+    
+}
+
+@media (min-width:1500px){
+.container{
+    width: 1440px !important; 
 }
     
 }

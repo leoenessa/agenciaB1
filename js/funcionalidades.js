@@ -1,5 +1,4 @@
 $(".top-navigation #menu-principal-mobile-btn").click(function(){
-    console.log("APERTOU");
     var botao =  $(this);
     var menu = $(".menu-principal-mobile");
     
@@ -21,4 +20,13 @@ $(".top-navigation #menu-principal-mobile-btn").click(function(){
     }
   
 });
-                    
+
+function b1slideshow(indice_slide,case_target){
+    var i;
+    var slides = $("."+case_target+" .slides .slide-img");
+    for(i=0; i<slides.length; i++){
+        slides[i].style.display = "none";
+    }
+
+    slides[indice_slide-1].style.display = "block";
+}

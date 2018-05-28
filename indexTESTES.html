@@ -6,87 +6,160 @@
     <title>AgenciaB1</title>
       
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
-    <link rel="stylesheet" href="css/estiloTESTES.css" />
-      <link rel="stylesheet" href="css/bootstrap.css">
-      <link rel="stylesheet"
-  href="css/animate.min.css">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+      <link rel="stylesheet" href="css/estiloTESTES.css" />
+     
+      <link rel="stylesheet" href="css/animate.min.css">
 
       <script src="js/jquery.min.js"></script>
       <script src="js/funcionalidades.js"></script>
-    <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+      <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+      <link rel="stylesheet" href="css/bootstrap.css">
     
       
       
   </head>
   <body>
+      <ul class="menu menu-principal-mobile320 menu-invisivel">
+            <a class="fechar320-btn"><i class="fa fa-times"></i></a>
+            <li><a href="" class="toQuemsomos" data-target="#quemsomos">Quem somos</a></li>
+            <li><a href="" class="toOquefazemos" data-target="#oquefazemos">O que fazemos</a></li>
+            <li><a href="" class="toCases" data-target="#cases">Cases</a></li>
+            <li><a href="" class="toContato" data-target="#contato">Contato</a></li>
+            <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
+      </ul>
       <div id="fullpage">
           <div class="section secao-1">
-            <div class="container">
-                
-                <div class="top-navigation">
-                    <div class="logotipo">
-                      <img src="img/logo.svg"
-                            srset="" class="logo-topo">
-                    </div>
-                    <ul class="menu-principal list-inline">
-                        <li><a href="#">Quem somos</a></li>
-                        <li><a href="#">O que fazemos</a></li>
-                        <li><a href="#">Cases</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
-                    </ul>
-                    <div class="container-menu-principal-mobile">
-                      <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
-                      <ul class="menu-principal-mobile menu-invisivel">
-                          <li><a href="#">Quem somos</a></li>
-                          <li><a href="#">O que fazemos</a></li>
-                          <li><a href="#">Cases</a></li>
-                          <li><a href="#">Contato</a></li>
-                          <li><a href="#">Fale com a gente</a></li>
+              <div class="container">
+                  
+                  <div class="top-navigation">
+                      <div class="logotipo">
+                        <img src="img/logo.svg"
+                              srset="" class="logo-topo">
+                      </div>
+                      <ul class="menu-principal list-inline">
+                          <li><a href="#quemsomos2">Quem somos</a></li>
+                          <li><a href="#oquefazemos2" >O que fazemos</a></li>
+                          <li><a href="#cases2">Cases</a></li>
+                          <li><a href="#contato2">Contato</a></li>
+                          <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
                       </ul>
+                      <div class="container-menu-principal-mobile">
+                        <i id="menu-principal-mobile-btn" class="fa fa-bars fa-2x" data-aberto="0"></i>
+                        <ul class="menu menu-principal-mobile menu-invisivel">
+                            <li><a href="" class="toQuemsomos" data-target="#quemsomos">Quem somos</a></li>
+                            <li><a href="" class="toOquefazemos" data-target="#oquefazemos">O que fazemos</a></li>
+                            <li><a href="" class="toCases" data-target="#cases">Cases</a></li>
+                            <li><a href="" class="toContato" data-target="#contato">Contato</a></li>
+                            <li><a href="#">Fale com a gente</a></li>
+                        </ul>
 
-                    </div>
+                      </div>
 
-                    <script>
-                      
-                      $(".top-navigation #menu-principal-mobile-btn").click(function(){
-                          var botao =  $(this);
-                          var menu = $(".menu-principal-mobile");
-                          
-                          if(botao.attr("data-aberto") == 0){
-                              botao.attr("data-aberto",'1');
-                              botao.removeClass('fa-bars');
-                              menu.removeClass('menu-invisivel');
-                              botao.addClass('fa-times');
-                              menu.addClass('menu-visivel');
-                          }
-                          else if(botao.attr('data-aberto') == 1){
-                              botao.attr("data-aberto",'0');
-                              botao.removeClass('fa-times');
-                              menu.removeClass('menu-visivel');
-                              botao.addClass('fa-bars');  
-                              menu.addClass('menu-invisivel');
-                          }
+                      <script>
                         
-                      });
+                        $(".top-navigation #menu-principal-mobile-btn").click(function(){
+                            var botao =  $(this);
+                            if($(window).width() < 768){
+                                var menu = $(".menu-principal-mobile320");
+                            }
+                            else{
+                                var menu = $(".menu-principal-mobile");
+                            }
+                            
+                            if(botao.attr("data-aberto") == 0){
+                                botao.attr("data-aberto",'1');
+                                botao.removeClass('fa-bars');
+                                menu.removeClass('menu-invisivel');
+                                botao.addClass('fa-times');
+                                menu.addClass('menu-visivel');
+                            }
+                            else if(botao.attr('data-aberto') == 1){
+                                botao.attr("data-aberto",'0');
+                                botao.removeClass('fa-times');
+                                menu.removeClass('menu-visivel');
+                                botao.addClass('fa-bars');  
+                                menu.addClass('menu-invisivel');
+                            }
+                            
+                            $(".fechar320-btn").click(function(){
+                                var menu = $(".menu-principal-mobile320");
 
-                    </script>
+                                menu.removeClass("menu-visivel");
+                                menu.addClass("menu-invisivel");
+                                botao.attr("data-aberto",'0');
+                                botao.removeClass('fa-times');
+                                botao.addClass('fa-bars');  
+                            })
+                            
+                            $('.menu .toQuemsomos, .menu .toOquefazemos, .menu .toCases, .menu .toContato').on('click', function(e){
+                                e.preventDefault();
+            
+                                var target = $(this).attr("data-target");
+                                var posicaoToScroll = $(target).offset().top;
+                                console.log(target+" "+posicaoToScroll);
+                                $("html").animate(
+                                {
+                                    scrollTop: posicaoToScroll+"px"
+                                },1000);
+                                
+                                menu.removeClass("menu-visivel");
+                                menu.addClass("menu-invisivel");
+                                botao.attr("data-aberto",'0');
+                                botao.removeClass('fa-times');
+                                botao.addClass('fa-bars');  
 
-                </div>             
-                <div class="jumbo">
-                      <h2>Especialistas em implementação e performance para seu e-commerce</h2>
-                      <p>Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.</p>
-                      <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
-                </div>
-                <div class="menu-inferior">
-                  <i class="fa fa-arrow-down btn-proximo"></i>
-                </div>
-            </div>
+                            });      
+                          
+                        });
+                          
+                        
+
+                      </script>
+
+                  </div>             
+                  <div class="jumbo">
+                        <h2>Especialistas em implementação e performance para seu e-commerce</h2>
+                        <p>Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.</p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
+                  </div>
+                  
+<!--
+                  <script>
+                      'use strict'
+                      var $actualBanner = 0;
+                      var $titulo = $(".jumbo h2");
+                      var $subtitulo = $(".jumbo p");
+                      var $secao1 = $(".secao-1");
+                      
+                      window.setInterval(function(){
+                          if($actualBanner==0){
+                              $actualBanner++;
+                              $secao1.addClass("especial");
+                              $(".secao-1.especial").css("opacity","1");
+                              $titulo.text("Especialistas em implementação e performance para seu e-commerce");
+                              $subtitulo.text("Especialista em entregar valor através de ações de performance digital e implementação de lojas virtuais com importante presença on-line.");
+                          }
+                          else{
+                              $actualBanner--;
+                              $secao1.removeClass("especial");
+                              $titulo.text("Projetos feitos sob medida para o seu negócio");
+                              $subtitulo.text("Soluções pensadas no que você precisa. Agende uma conversa com a gente.");
+                          }
+                          
+                      }, 2000);
+                  </script>
+                  
+-->
+                  
+                  <div class="menu-inferior">
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
+                  </div>
+              </div>
         </div>
          
-          <div class="section secao-2 fp-auto-height-responsive">
+          <div class="section secao-2 fp-auto-height-responsive" id="oquefazemos">
             <div class="container">
                 
                 <div class="oque-fazemos">
@@ -144,13 +217,13 @@
                     </div>
                 </div>
                 <div class="menu-inferior">
-                  <i class="fa fa-arrow-down btn-proximo"></i>
+                  <img src="img/icon%20mouse.png" class="btn-proximo">
                 </div>
      
             </div>
         </div>
         
-          <div class="section secao-3 fp-auto-height-responsive">
+          <div class="section secao-3 fp-auto-height-responsive" id="cases">
               <div class="container">
                   
                   <div class="cases">
@@ -159,29 +232,140 @@
                   </div>
                   
                   <div class="container-cases">
-                      
-                      <div class="conteudo-cases is-animated">
-                          <img class="img-responsive" src="img/xstore.jpg" 
-                               srcset="img/xstore@2x.jpg 2x, img/xstore.jpg 1x">
+
+                    
+<!--================XSTORE================-->
+                    
+                        <div class="conteudo-cases is-animated" data-case="xstore">
+                            <img class="img-responsive" src="img/xstore.png" 
+                               srcset="img/xstore@2x.jpg 2x, img/xstore.png 1x">
                             <p class="descricao-case">Identidade Visual e e-commerce da loja XStore</p>
-                      </div>
+                        </div>
+                        
+                        <div class="cases-slide-show xstore elemento-invisivel" data-case="xstore">
+                            <a class="fechar-btn">Fechar
+                            </a>
+                            <div class="container-slideshow">
+                                <a class="slide-anterior-btn">
+                                    <i class="fa fa-chevron-left fa-4x"></i>
+                                </a>
+                                <div class="slides">
+                                    <img class="slide-img img-responsive" src="img/xstore-slide-img.JPG">
+                                    <img class="slide-img img-responsive" src="img/img-2.jpg">
+                                    <img class="slide-img img-responsive" src="img/img.jpg">
+                                </div>
+                                <a class="slide-posterior-btn">
+                                    <i class="fa fa-chevron-right fa-4x"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                   
                       
-                      <div class="conteudo-cases is-animated">
-                          <img class="img-responsive" src="img/fredexplica.jpg" 
-                               srcset="img/fredexplica@2x.jpg 2x, img/fredexplica.jpg 1x">
+<!--================FRED================-->
+                      
+                      <div class="conteudo-cases is-animated" data-case="fred">
+                          <img class="img-responsive" src="img/fred.png" 
+                               srcset="img/fredexplica@2x.jpg 2x, img/fred.png 1x">
                             <p class="descricao-case">Engajamento do Instagram do @ofredexplica</p>
                       </div>
                       
-                      <div class="conteudo-cases is-animated">
-                          <img class="img-responsive" src="img/toymania.jpg" 
-                               srcset="img/toymania@2x.jpg 2x, img/toymania.jpg 1x">
+                      <div class="cases-slide-show fred elemento-invisivel" data-case="fred">
+                            <a class="fechar-btn">Fechar
+                            </a>
+                            <div class="container-slideshow">
+                                <a class="slide-anterior-btn">
+                                    <i class="fa fa-chevron-left fa-4x"></i>
+                                </a>
+                                <div class="slides">
+                                    <img class="slide-img img-responsive" src="img/xstore-slide-img.JPG">
+                                    <img class="slide-img img-responsive" src="img/img-2.jpg">
+                                    <img class="slide-img img-responsive" src="img/img.jpg">
+                                </div>
+                                <a class="slide-posterior-btn">
+                                    <i class="fa fa-chevron-right fa-4x"></i>
+                                </a>
+                            </div>
+
+                      </div>
+
+<!--================TOYMANIA================-->
+                      
+                      <div class="conteudo-cases is-animated" data-case="toy">
+                          <img class="img-responsive" src="img/toy.png" 
+                               srcset="img/toymania@2x.jpg 2x, img/toy.png 1x">
                             <p class="descricao-case">Layout do e-commerce ToyMania</p>
                       </div>
+                      
+                      <div class="cases-slide-show toy elemento-invisivel" data-case="toy">
+                            <a class="fechar-btn">Fechar
+                            </a>
+                            <div class="container-slideshow">
+                                <a class="slide-anterior-btn">
+                                    <i class="fa fa-chevron-left fa-4x"></i>
+                                </a>
+                                
+                                <div class="slides">
+                                    <img class="slide-img img-responsive" src="img/xstore-slide-img.JPG">
+                                    <img class="slide-img img-responsive" src="img/img-2.jpg">
+                                    <img class="slide-img img-responsive" src="img/img.jpg">
+                                </div>
+                                
+                                <a class="slide-posterior-btn">
+                                    <i class="fa fa-chevron-right fa-4x"></i>
+                                </a>
+                            </div>
+
+                      </div>
+                    
+                      
+                      <script>     
+                            var slideIndex=1;
+                            $(".cases-slide-show .slide-anterior-btn").click(function(){
+                                slideIndex--;
+                                if(slideIndex<1){slideIndex=1;}
+                                
+                                
+                                b1slideshow(slideIndex,$(this).closest(".cases-slide-show").attr("data-case"));
+                            });
+                          
+                            $(".cases-slide-show .slide-posterior-btn").click(function(){
+                                slideIndex++;
+                                if(slideIndex>3){slideIndex=3;}
+                                 b1slideshow(slideIndex,$(this).closest(".cases-slide-show").attr("data-case"));
+                            });
+                          
+                            $(".conteudo-cases").click(function(){
+                                if($(this).attr("data-case") == 'xstore'){
+                                    slideIndex = 1;
+                                    b1slideshow(slideIndex,'xstore');
+                                    $(".cases-slide-show.xstore").removeClass("elemento-invisivel");
+                                    $(".cases-slide-show.xstore").addClass("elemento-visivel");
+                                }
+                                else if($(this).attr("data-case") == 'fred'){
+                                    $(".cases-slide-show.fred").removeClass("elemento-invisivel");
+                                    $(".cases-slide-show.fred").addClass("elemento-visivel");
+                                }
+                                else if($(this).attr("data-case") == 'toy'){
+                                    $(".cases-slide-show.toy").removeClass("elemento-invisivel");
+                                    $(".cases-slide-show.toy").addClass("elemento-visivel");
+                                }
+                            });
+                            
+                            $(".cases-slide-show .fechar-btn").click(function(){
+                               var $fechar_div = $(this).closest("div");
+                               $fechar_div.removeClass("elemento-visivel");
+                               $fechar_div.addClass("elemento-invisivel");
+                            });
+                          
+                            
+                      </script>
+                      
                       
                   </div>
                   
                   <div class="menu-inferior">
-                    <i class="fa fa-arrow-down btn-proximo"></i>
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
                   </div>
               </div>
             
@@ -224,13 +408,13 @@
                   </div>     
                   
                   <div class="menu-inferior">
-                    <i class="fa fa-arrow-down btn-proximo"></i>
+                    <img src="img/icon%20mouse.png" class="btn-proximo">
                   </div>
                   
               </div>
           </div>
           
-          <div class="section secao-5 fp-auto-height-responsive">
+          <div class="section secao-5 fp-auto-height-responsive" id="quemsomos">
                 <div class="container">
                     
                     <div class="quem-faz">
@@ -241,8 +425,7 @@
                     <div class="container-equipe">
                         
                         <div class="conteudo-equipe is-animated">
-                          <img src="img/CEO.gif"
-                               srcset="img/ceo@2x.gif 2x, img/CEO.gif 1x">
+                          <img src="img/CEO.gif">
                         
                           <h3 class="nome-equipe">Bernard Viana</h3>
                           <p class="cargo-equipe">CEO</p>
@@ -252,8 +435,7 @@
                         </div>
                         
                         <div class="conteudo-equipe is-animated">
-                          <img src="img/CEO.gif"
-                               srcset="img/ceo@2x.gif 2x, img/CEO.gif 1x">
+                          <img src="img/CEO.gif">
                         
                           <h3 class="nome-equipe">Bernard Viana</h3>
                           <p class="cargo-equipe">Diretor de Criação</p>
@@ -263,8 +445,7 @@
                         </div>
                         
                         <div class="conteudo-equipe is-animated">
-                          <img src="img/Gerente.gif"
-                               srcset="img/ceo@2x.gif 2x, img/Gerente.gif 1x">
+                          <img src="img/Gerente.gif">
                         
                           <h3 class="nome-equipe">Luiza Marroig</h3>
                           <p class="cargo-equipe">Gerente de Projetos</p>
@@ -274,8 +455,7 @@
                         </div>
                         
                         <div class="conteudo-equipe is-animated">
-                          <img src="img/CEO.gif"
-                               srcset="img/ceo@2x.gif 2x, img/CEO.gif 1x">
+                          <img src="img/CEO.gif">
                         
                           <h3 class="nome-equipe">Leonardo de Oliveira</h3>
                           <p class="cargo-equipe">Desenvolvedor Sênior</p>
@@ -286,13 +466,13 @@
                     </div>
                     
                     <div class="menu-inferior">
-                        <i class="fa fa-arrow-down btn-proximo"></i>
+                        <img src="img/icon%20mouse.png" class="btn-proximo">
                     </div>
                     
                 </div>
           </div>
           
-          <div class="section secao-6">
+          <div class="section secao-6 fp-auto-height-responsive" id="contato">
             <div class="container">
                 
                 <div class="contatos">
@@ -349,19 +529,22 @@
                 var $isAnimatedSecond = $('.secao-2 .is-animated');
                 var $isAnimatedThird = $('.secao-3 .is-animated');
                 var $isAnimatedFour = $('.secao-4 .is-animated');
-                var $menusInferiores = $('.menu-inferior');
+                var $menusInferiores = $('.menu-inferior img');
                
                 $(document).ready(function() {
                     $('#fullpage').fullpage({
-                        responsiveHeight: 768,
-                        // responsiveHeight: 2000,
-                        navigation:true,  
+                        //responsiveHeight: 1024,
+                        slideSelector: '.slide2',
+                        anchors: ['home2','oquefazemos2', 'cases2', 'oquefalam2', 'quemsomos2','contato2'],
+                        scrollOverflow: true,
+                        responsiveWidth: 1280,
+                        navigation:true,
                         //=========================
                         
                         onLeave: function(index, nextIndex, direction) {
                             
                             if( index == 1 && nextIndex == 2 ) {
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                                $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                                 $isAnimatedSecond.addClass('animated zoomIn'); 
                                 $isAnimatedSecond.eq(0).css('animation-delay', '0.1s');
                                 $isAnimatedSecond.eq(1).css('animation-delay', '0.2s');
@@ -374,7 +557,6 @@
                                 
                             }
                             else if(( index == 1 || index == 2 ) && nextIndex == 3 ){
-                                console.log("DENTRO DO 3");
                                 $isAnimatedThird.eq(0).addClass('animated fadeInRight');
                                 $isAnimatedThird.eq(0).css('animation-delay', '0.4s');
                                 $isAnimatedThird.eq(1).addClass('animated fadeInDown');
@@ -383,18 +565,15 @@
                                 $isAnimatedThird.eq(0).css('animation-delay', '0.4s');
                             }
                             else if(( index == 1 || index == 2 || index == 3 ) && nextIndex == 4){
-                                console.log("DENTRO DO 4");
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                                $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                                 $isAnimatedFour.addClass('animated slideInLeft'); 
                                 $isAnimatedFour.css('animation-delay', '0.2s');
                                 
                             }
                             else if(( index == 1 || index == 2 || index == 3 || index == 4 ) && nextIndex == 5){
-                                console.log("DENTRO DO 5");
-                                $menusInferiores.eq(nextIndex-1).css("color","#c8d400");
+                               $menusInferiores.eq(nextIndex-1).attr("src","img/icon%20mouse-green.png");
                             }
                             else if(( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 ) && nextIndex == 6){
-                                console.log("DENTRO DO 6");
                             }
                             
                         }
@@ -410,5 +589,7 @@
            $.fn.fullpage.moveSectionDown(); 
         });
       </script>
+      
+      <script src="js/bootstrap.js"></script>
   </body>
 </html>
