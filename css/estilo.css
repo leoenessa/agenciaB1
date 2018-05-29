@@ -27,6 +27,12 @@ p::selection{
     transition: opacity .5s ease;
 }
 
+.secao-1.especial{
+    background: url(../img/img.jpg);
+    background-size: cover;
+}
+
+
 
 .secao-1-bg1{
     background-image: url(../img/img.jpg);
@@ -99,7 +105,7 @@ p::selection{
     height: 100vh;
     transition: all .3s ease;
     text-align: center;
-    padding-top: 25%;
+    padding-top: 30%;
 }
 
 .menu-principal-mobile{
@@ -165,18 +171,28 @@ p::selection{
     text-transform: uppercase;
 }
 
-a.menu-whatsapp{
-    border: 1px solid #fff;
+.menu a.menu-whatsapp{
     border-radius: 30px;
     padding: 8px 15px;    
     cursor: pointer;
-}
-    
-a.menu-whatsapp:hover{
-    color: #fff;
     background-color: #32ba46;
+    color: #fff;
+    font-size: 14px;
 }
     
+.menu a.menu-whatsapp:hover{
+    background-color:#3edb55;
+}
+
+.menu a.menu-whatsapp::before{
+    content: url(../img/whatsapp-logo.svg);
+    width: 1em;
+    height: 1em; 
+    padding-right: 10px;
+    vertical-align: sub;
+}
+
+
 
 .menu-principal li:first-child{
     margin-left: 0;
@@ -437,14 +453,15 @@ a.menu-whatsapp:hover{
 }
 
 .cases-slide-show .slides{
-    width: 50vw;
-    height: 50vw;
+    width: 70vw;
+    height: 70vw;
 }
 
 .cases-slide-show .slides .slide-img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: all .3s ease;
 }
 
 .cases-slide-show .fechar-btn{
@@ -754,7 +771,7 @@ a.menu-whatsapp:hover{
     flex-wrap: wrap;
 }
 
-.secao-6 form#formulario-contato input,select{
+.secao-6 form#formulario-contato input{
     width: 100%;
     color: #000;
     border: solid 1px #dfdfdf;
@@ -763,13 +780,18 @@ a.menu-whatsapp:hover{
     height: 2em;
     font-size: 1em;
     padding: 5%;
-}
-
-.secao-6 form#formulario-contato input,select:focus{
     outline: none;
-    border-color: 1px solid #ff0606;
+    transition: all .3s ease-in-out;
 }
 
+.secao-6 form#formulario-contato input:focus{
+    box-shadow: 0 0 5px rgba(190, 214, 48, 1);
+    border: 1px solid rgba(190, 214, 48, 1);
+}
+
+.secao-6 form#formulario-contato input:invalid{
+    border: 2px solid red;
+}
 .secao-6 form#formulario-contato textarea{
     width: 100%;
     height: 10em;
@@ -838,7 +860,7 @@ footer .redes-sociais-footer a:hover{
 
     
 .menu-principal-mobile320{
-    padding-top: 20%;
+    padding-top: 25%;
 }
     
 .jumbo{ margin-top: 20%; }
@@ -987,22 +1009,6 @@ DESKTOP
     margin: 0;
 }
 
-.secao-1{
-   background-image: url(../img/img-2.jpg);
-    background-size: cover;
-    height: 100%;
-}
-
-.secao-1.especial{
-    opacity: .5 !important; 
-}
-.secao-1.especial::before{
-    content: '';
-    position: absolute;
-    left: 0; top: 0; right:0; bottom: 0;
-    background: url(../img/img.jpg);
-    background-size: cover;
-}
 
 .secao-1 .container{
     height: 100%;
@@ -1076,7 +1082,7 @@ a.menu-whatsapp{
 }
     
 a.menu-whatsapp:hover{
-    color: #fff;
+    color: #fff !important;
     background-color: #32ba46;
 }
     
@@ -1569,6 +1575,7 @@ p.depoimento::after{
     font-size: 1.5em;
     padding: 5px;
 }
+    
 
 .secao-6 form#formulario-contato textarea{
     width: 100%;
@@ -1590,6 +1597,7 @@ p.depoimento::after{
     font-weight: bold;
     padding: 1em;
 }
+    
 
 .secao-6 footer{
     background-color: #26282b;
@@ -1629,5 +1637,3 @@ footer .redes-sociais-footer a:hover{
 }
     
 }
-
-
