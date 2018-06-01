@@ -713,6 +713,29 @@ p::selection{
     text-align: center;
 }
 
+.mensagens-retorno{
+    position: relative;
+}
+
+.alert{
+    width: 50%;
+    font-size: 15px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 1;
+    left: 25%;
+    transition: opacity .3s ease;
+}
+
+.alert-visivel{
+    opacity: 1;
+}
+
+.alert-invisivel{
+    opacity: 0;
+}
+
 .secao-6 .contatos p{
     font-size: 22px;
     font-weight: 300;
@@ -767,7 +790,7 @@ p::selection{
 .secao-6 form#formulario-contato{
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
+    margin-top: 5%;
     flex-wrap: wrap;
 }
 
@@ -777,8 +800,8 @@ p::selection{
     border: solid 1px #dfdfdf;
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
     margin-bottom: 5%;
-    height: 2em;
-    font-size: 1em;
+    height: 1em;
+    font-size: 15px;
     padding: 5%;
     outline: none;
     transition: all .3s ease-in-out;
@@ -799,47 +822,58 @@ p::selection{
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
     border: solid 1px #dfdfdf;
-    margin-bottom: 10%;
-    font-size: 1em;
+    margin-bottom: 5%;
+    font-size: 15px;
 }
 
 .secao-6 form#formulario-contato #contato-form-btn{
+    margin-bottom: 30px;
+    border: 0;
+    border-radius: 50px;
     background-color: #bed630;
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 50px;
-    font-size: 15px;
     color: #340c46;
     font-weight: bold;
-    padding: 1em;
+    font-size: 12px;
+    padding: 10px 23px;
+    cursor: pointer;
+    
 }
 
-.secao-6 footer{
+footer{
     background-color: #26282b;
     height: 70px;
     color: #fff;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
+    display: flex !important;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
 footer img{
-    width: 33%;
+    width: 25%;
     padding-left: 5px;
 }
 
 footer address{
     margin: 0;
-    width: 33%;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
 }
 
 footer address p{
     display: inline-block;
     text-align: center;
     font-size: 10px;
+}
+
+footer .redes-sociais-footer{
+    width: 25%;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
 }
 
 footer .redes-sociais-footer a{
@@ -884,7 +918,16 @@ footer .redes-sociais-footer a:hover{
 }
     
 .secao-6 form#formulario-contato input,select{
-    font-size: 1.5em;
+    font-size: 17px;
+    padding: 21px;
+}
+    
+.secao-6 form#formulario-contato textarea{    
+    font-size: 17px;
+}
+    
+.secao-6 form#formulario-contato #contato-form-btn{
+    font-size: 17px;
 }
 
 footer img{
@@ -971,10 +1014,16 @@ TABLET
     font-size: 14px;
 }    
 
-.secao-6 form#formulario-contato input,select{
+.secao-6 form#formulario-contato input{
     width: 48%;
-    height: 2em;
-    font-size: 2em;
+    font-size: 20px;
+}
+
+.secao-6 form#formulario-contato .form-control{
+    width: 48% !important;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 0;
 }
 
 .secao-6 form#formulario-contato textarea{
@@ -1571,9 +1620,7 @@ p.depoimento::after{
     border: solid 1px #dfdfdf;
     box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
-    height: 60px;
-    font-size: 1.5em;
-    padding: 5px;
+    font-size: 20px;
 }
     
 
@@ -1585,27 +1632,18 @@ p.depoimento::after{
     border: solid 1px #dfdfdf;
     margin-bottom: 25px;
     padding: 5px;
-    font-size: 1.5em;
+    font-size: 20px;
 }
 
 .secao-6 form#formulario-contato #contato-form-btn{
-    background-color: #bed630;
-    box-shadow: 0 0 21px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 50px;
-    font-size: 15px;
-    color: #340c46;
-    font-weight: bold;
-    padding: 1em;
+    font-size: 20px;
 }
     
 
-.secao-6 footer{
+footer{
     background-color: #26282b;
     height: 70px;
     color: #fff;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;

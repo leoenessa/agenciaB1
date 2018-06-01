@@ -52,7 +52,7 @@
                             <li><a href="" class="toOquefazemos" data-target="#oquefazemos">O que fazemos</a></li>
                             <li><a href="" class="toCases" data-target="#cases">Cases</a></li>
                             <li><a href="" class="toContato" data-target="#contato">Contato</a></li>
-                            <li><a href="#">Fale com a gente</a></li>
+                            <li><a class="menu-whatsapp" href="#">Fale com a gente</a></li>
                         </ul>
 
                       </div>
@@ -125,7 +125,6 @@
                         <a class="btn btn-primary btn-lg" href="#" role="button">Entre em contato</a>
                   </div>
                   
-<!--
                   <script>
                       'use strict'
                       var $actualBanner = 0;
@@ -148,10 +147,9 @@
                               $subtitulo.text("Soluções pensadas no que você precisa. Agende uma conversa com a gente.");
                           }
                           
-                      }, 2000);
+                      }, 8000);
                   </script>
                   
--->
                   
                   <div class="menu-inferior">
                     <img src="img/icon%20mouse.png" class="btn-proximo">
@@ -475,6 +473,19 @@
           <div class="section secao-6 fp-auto-height-responsive" id="contato">
             <div class="container">
                 
+                <div class="mensagens-retorno">
+                    <div class="alert alert-success alert-invisivel">
+                        <button type="button" class="close"><span>&times;</span></button>
+                        <strong>Sucesso!</strong> Recebemos a sua mensagem. Obrigado!
+                    </div>
+                    
+                    <div class="alert alert-danger alert-invisivel">
+                        <button type="button" class="close"><span>&times;</span></button>
+                        <strong>Erro!</strong> Identificamos os seguintes erros no envio da mensagem:
+                    </div>
+                
+                </div>
+                
                 <div class="contatos">
                     <h2>Contato</h2>
                     <p>Não importa o tamanho do desafio</p>
@@ -485,12 +496,15 @@
                     </div>21
                 </div>
                 
-                <form action="#" method="post" id="formulario-contato">
+                <form action="/testes/php/mail2.php" method="post" id="formulario-contato">
+                      
                     <input type="text" name="form_nome" placeholder="Insira o seu nome">
-                    <input type="email" name="form_email" placeholder="Insira o seu e-mail">
+                    
+                    <input type="email" name="form_email" placeholder="Insira o seu e-mail" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
+                    
                     <input type="tel" name="form_telefone" placeholder="Insira o seu telefone">
                     
-                    <select name="form_projeto" title="Selecione o seu desafio">
+                    <select class="form-control" name="form_projeto" title="Selecione o seu desafio">
                         <optgroup>
                             <option id="ecommerce">E-commerce</option>
                             <option id="engajamento">Engajamento</option>
@@ -498,15 +512,41 @@
                         </optgroup>
                     </select>
                     
-                    <textarea id="form_mensagem" placeholder="Insira sua mensagem">
+                    <textarea name="form_mensagem" id="form_mensagem" placeholder="Insira sua mensagem">
                     
                     </textarea>
                     
-                    <button type="submit" id="contato-form-btn">Enviar mensagem</button>
+                    <a id="contato-form-btn">Enviar mensagem</a>
+                    <script>
+                        var status,a;
+                        $('#contato-form-btn').click(function(){
+                            console.log("AQUI");
+                             $.post("/testes/php/mail2.php",$( "#formulario-contato").serialize(),function(data){
+                                 status = data;
+                                 a = JSON.parse(status);
+                                 
+                                 if(a.success){
+                                     console.log("Sucesso");
+                                     $(".alert.alert-success").removeClass("alert-invisivel");
+                                 }
+                                 else{
+                                     console.log("Erro");
+                                     $(".alert.alert-danger").removeClass("alert-invisivel");
+                                 }
+                             });
+                            
+                        });
+                        
+                        $("button.close").click(function(){
+                            console.log("PRPQP");
+                           $(".alert").addClass("alert-invisivel");
+                        });
+                    </script>
                 </form>
             </div>    
               
-            <footer>
+          </div>
+          <footer>
                 <img src="img/logo.svg"
                      srset="" class="logo-footer" />
 
@@ -519,7 +559,6 @@
                     <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
                 </div>
             </footer>
-          </div>
 </div>  
       <script>
            (function($) {

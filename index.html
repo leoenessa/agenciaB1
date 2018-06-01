@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-      <link rel="stylesheet" href="css/estiloTESTES.css" />
+      <link rel="stylesheet" href="css/estilo.css" />
      
       <link rel="stylesheet" href="css/animate.min.css">
 
@@ -483,14 +483,15 @@
                     </div>21
                 </div>
                 
-                <form action="#" method="post" id="formulario-contato">
+                <form action="php/mail.php" method="post" id="formulario-contato">
+                      
                     <input type="text" name="form_nome" placeholder="Insira o seu nome">
                     
                     <input type="email" name="form_email" placeholder="Insira o seu e-mail" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$">
                     
                     <input type="tel" name="form_telefone" placeholder="Insira o seu telefone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$">
                     
-                    <select name="form_projeto" title="Selecione o seu desafio">
+                    <select class="form-control" name="form_projeto" title="Selecione o seu desafio">
                         <optgroup>
                             <option id="ecommerce">E-commerce</option>
                             <option id="engajamento">Engajamento</option>
@@ -506,7 +507,8 @@
                 </form>
             </div>    
               
-            <footer>
+          </div>
+          <footer>
                 <img src="img/logo.svg"
                      srset="" class="logo-footer" />
 
@@ -519,7 +521,6 @@
                     <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
                 </div>
             </footer>
-          </div>
 </div>  
       <script>
            (function($) {
